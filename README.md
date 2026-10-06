@@ -20,22 +20,6 @@ Training then follows this emulator: its circuit-aware forward and backward form
 
 **Method development and training sequence.** Hardware design comes first; its mathematical emulator then guides gradient-based HCST and conductance updates. The feedback arrow represents repeated forward/backward/update steps inside software training, not a real-time physical-chip loop. Evaluation uses the same fixed Vos. [Editable SVG](docs/figures/hcst-circuit-emulator-training.svg). Original project artwork, covered by MIT.
 
-```mermaid
-flowchart LR
-    D[Data to input voltages] --> S[ReRAM Crossbar Array / Synapse Array]
-    subgraph N[Neuron Circuit: hidden layers]
-        I[IV-Converter + Subtractor] --> A[Activation Function]
-        A --> F[Voltage Follower]
-    end
-    S --> I
-    F --> NEXT[Next Synapse Array]
-    NEXT --> O[Linear final readout]
-    O --> E[Classification and analysis]
-    C[Fixed gains and chip offsets] -. software model .-> I
-    C -. software model .-> F
-    T[Hardware-conscious software training] -. trained conductance pairs .-> S
-```
-
 **ReRAM Crossbar Array** and **Synapse Array** name the same block. **IV-Converter + Subtractor, Activation Function, and Voltage Follower** together form the **Neuron Circuit**. **ReLU** is the implemented JJAP baseline instance of Activation Function. The final layer uses linear readout and bypasses activation/follower, matching the inspected source model.
 
 ![Schematic neural-network-to-circuit mapping: differential Synapse Arrays and Neuron Circuits](docs/figures/fully-analog-reram-network-to-chip.png)
