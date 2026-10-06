@@ -5,3 +5,5 @@ recursive-include tests *.py
 recursive-include tools *.py
 recursive-include evidence *.json
 global-exclude *.pyc
+
+recursive-include docs/figures *.png

@@ -14,3 +14,7 @@ The public file scope is:
 The per-module source/structure relationship is documented in [PROVENANCE](PROVENANCE.md). The implementation uses mathematical reformulations and a newly separated class structure, rather than copying original script text into differently named files. There is no transplanted historical header, author comment, training loop or device-model body in the distributable files. Algorithms, functional interfaces and public research attribution are distinguished from the copyright and redistribution status of external source files.
 
 The private pre-publication originals and review packages are retained outside this repository and are not part of its Git history. Optional package dependencies keep their own licenses. See [NOTICE](../NOTICE.md) for the precise license boundary and [REPRODUCTION_GAPS](REPRODUCTION_GAPS.md) for unfinished matching work.
+
+## Separately licensed figure
+
+Original JJAP Fig. 13 is included under the original author's figure reuse rights, with DOI, caption and JSAP copyright credit. It is excluded from MIT; [FIGURE_RIGHTS](FIGURE_RIGHTS.md) records the applicable policy. No complete proof or manuscript is included.
