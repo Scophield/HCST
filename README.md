@@ -12,6 +12,10 @@ An ideal neural network sees weighted sums and activations. A real analog networ
 
 HCST makes those circuit characteristics part of the software training model. A fixed set of circuit parameters describes a particular chip. Software trains for that model before the final conductances are deployed, rather than asking the memory devices to perform the full sequence of training updates.
 
+The development starts with **the hardware circuit design**, not an ideal neural network trained independently of its implementation. From the Synapse Array and Neuron Circuit, we derive a **hardware-derived mathematical emulator** (a mathematical digital twin): voltage/conductance equations that reflect the circuit topology, finite amplifier gains, fixed Vos, and IVC load conductances. These are the forward relations in JJAP Section 4.2, Eqs. (1)-(5).
+
+Training then follows this emulator: its circuit-aware forward and backward formulations define gradient-based descent and updates of the differential conductances (Section 4.3, Eqs. (6)-(14)). The updated conductances are mapped back to the target hardware model and evaluated under the **same fixed Vos**. This hardware-to-model-to-training order keeps optimization tied to the circuit that will perform inference, whereas conventional ideal-network offline training omits those circuit characteristics. Mathematical digital twin here means a circuit-derived software model, not a real-time synchronized physical chip; the paper's evaluation used SPICE without fabricated chips. The original-source update path and the public experimental analytic optimizer remain distinct, as described below.
+
 ```mermaid
 flowchart LR
     D[Data to input voltages] --> S[ReRAM Crossbar Array / Synapse Array]
