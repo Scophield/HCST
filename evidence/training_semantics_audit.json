@@ -1,0 +1,201 @@
+{
+  "passed": true,
+  "seed": 20261006,
+  "config": {
+    "seed": 20261006,
+    "widths": [
+      3,
+      4,
+      3,
+      2
+    ],
+    "loads": [
+      1,
+      0.3333333333333333,
+      0.16666666666666666
+    ],
+    "gi": 163.0,
+    "gs": 163.0,
+    "gf": 163.0,
+    "ref_i": 0.4616,
+    "ref_s": 0.4616,
+    "ref_f": 0.4616,
+    "v0": 0.5,
+    "input_span": 0.35,
+    "mac_min": 0.05,
+    "output_mac_min": 1e-09,
+    "conductance_scale_s": 1e-05,
+    "g_min": 0.01,
+    "g_max": 1.0,
+    "offset_std_v": 0.0001,
+    "learning_rate": 0.002,
+    "epochs": 10,
+    "batch_size": 32,
+    "train_limit": 256,
+    "test_limit": 128,
+    "label_low_v": 0.55,
+    "label_high_v": 0.85,
+    "provenance": "new-2026-validation-not-paper-reproduction",
+    "activation": "relu"
+  },
+  "source_sha256": "768666f761b970b413259000823fa6c39d24dc2e19348deae1792772558aae8c",
+  "input_sha256": "862570ab69fde1c61f03e877448208ec0084275ccebfef698c11e823e3f87c37",
+  "target_sha256": "e8a5a0915d1c7e08691664883c44267e422d3b90c5cd139280161540b1ac3bc2",
+  "initial_array_sha256": {
+    "layer0_p": "b9f478827e11b85d62587d90a0e44204cac1a085c8cea1a5a693ec3b77cd9a3e",
+    "layer0_n": "20aa5a4cab0457c2648acb50cc5c0975eb89613366d43a7bfa7b161d34a341bf",
+    "layer0_i_p": "a336fcb7ca696aaf42aa552e430c7d23fd918e0661a486ca73d1f32c65a32e81",
+    "layer0_i_n": "907592c6571a622fdf13540b5d63eda8eec0ee34e24133553f94dc46287438a7",
+    "layer0_subtractor": "972d260c39c1e9205902375fbf96eb0b48b0a22657c7e833dcee27a935275a07",
+    "layer0_activation": "ff173a9cfe8e8dc2f4ef50cc2cac7a058928db27a3c0a7dff3259692dbed9674",
+    "layer0_follower": "f4e19c6e606a866f43e17e7b21b81249f46af51dfee6238ba5144547016d90ce",
+    "layer1_p": "860a914a25fefde2df2d2cf374a765f0dc4d5537dd3548ffc9d818aa6a806479",
+    "layer1_n": "20aa5a4cab0457c2648acb50cc5c0975eb89613366d43a7bfa7b161d34a341bf",
+    "layer1_i_p": "329058717ba373742de2db94808ecf084c0b1585576bb5e1ce8b89c45a3531fd",
+    "layer1_i_n": "4a65c7307530fd3b8a90274952f2e100583d83a3e643126e0405a418389aa2e5",
+    "layer1_subtractor": "ace486f238e5d18995251ecbc888775915235fa24b3f5cbe3995caa0a852ace9",
+    "layer1_activation": "9d61d68e2a4b717ce82551bbc28bec1308006cb32512473f13d7d84916e8e42f",
+    "layer1_follower": "57c4e2c18280bc9783f666e775806a907bcb9592c249aa8d4e1e7bd4b96c3734",
+    "layer2_p": "7d5f7c3b2aa891cfc94b8347de183bc9411d0747e67ca795f12dd6ebb76fc385",
+    "layer2_n": "197755773886c5568ecde9fd31e7d3522d9de3e102ebbaf2a7031348d9d42257",
+    "layer2_i_p": "14567f18df1ce8a47779a66aab73cd9a777632808679d08fddfd234fff782962",
+    "layer2_i_n": "96e77ad7351978660fa30d6528a7a28f8a580744543e3bf37bb8c5e1384c1692",
+    "layer2_subtractor": "40f078c3fbbc817ffd5af8213b74a3cae1cbc5cf85a63a0467b95ab2d69552dd",
+    "layer2_activation": "d8981ec0209af36dd16929a081a1e2b326355c367e1e7ed63e4b3c6bac85399b",
+    "layer2_follower": "5d2340e2a15ab4d62bbdecf85148474cd8af00c81b06dafcd0b82dab1b864a3a"
+  },
+  "numerical_gradient": {
+    "method": "central differences of complete mean batch loss; fixed complementary conductance signs",
+    "epsilon": 1e-06,
+    "layers": [
+      {
+        "layer": 0,
+        "checked_signed_weights": 12,
+        "max_absolute_gradient_error": 2.1098872649005784e-11,
+        "ivc_boundary_margin_v": 0.3732461622893547,
+        "activation_boundary_margin_v": 0.018701395545770216
+      },
+      {
+        "layer": 1,
+        "checked_signed_weights": 12,
+        "max_absolute_gradient_error": 1.1497787097414225e-11,
+        "ivc_boundary_margin_v": 0.35738692784719617,
+        "activation_boundary_margin_v": 0.026246125980502133
+      },
+      {
+        "layer": 2,
+        "checked_signed_weights": 6,
+        "max_absolute_gradient_error": 8.29196433738133e-12,
+        "ivc_boundary_margin_v": 0.3214756223845362,
+        "activation_boundary_margin_v": null
+      }
+    ],
+    "passed": true
+  },
+  "trajectory": [
+    {
+      "step": 1,
+      "reference_loss": 0.032488130033016205,
+      "adapter_loss": 0.032488130033016205,
+      "experimental_analytic_loss": 0.03248811150027387,
+      "maximum_conductance_update_difference": 0.0,
+      "reference_adapter_loss_difference": 0.0
+    },
+    {
+      "step": 2,
+      "reference_loss": 0.031812261790037155,
+      "adapter_loss": 0.031812261790037155,
+      "experimental_analytic_loss": 0.03246714244515823,
+      "maximum_conductance_update_difference": 0.0,
+      "reference_adapter_loss_difference": 0.0
+    },
+    {
+      "step": 3,
+      "reference_loss": 0.03119174763560295,
+      "adapter_loss": 0.03119174763560295,
+      "experimental_analytic_loss": 0.03244620852697736,
+      "maximum_conductance_update_difference": 0.0,
+      "reference_adapter_loss_difference": 0.0
+    },
+    {
+      "step": 4,
+      "reference_loss": 0.030624907463788986,
+      "adapter_loss": 0.030624907463788986,
+      "experimental_analytic_loss": 0.0324253098052817,
+      "maximum_conductance_update_difference": 0.0,
+      "reference_adapter_loss_difference": 0.0
+    },
+    {
+      "step": 5,
+      "reference_loss": 0.03010958805680275,
+      "adapter_loss": 0.03010958805680275,
+      "experimental_analytic_loss": 0.03240444633916536,
+      "maximum_conductance_update_difference": 0.0,
+      "reference_adapter_loss_difference": 0.0
+    },
+    {
+      "step": 6,
+      "reference_loss": 0.029643390327692032,
+      "adapter_loss": 0.029643390327692032,
+      "experimental_analytic_loss": 0.03238361818726543,
+      "maximum_conductance_update_difference": 0.0,
+      "reference_adapter_loss_difference": 0.0
+    },
+    {
+      "step": 7,
+      "reference_loss": 0.029112208634614944,
+      "adapter_loss": 0.029112208634614944,
+      "experimental_analytic_loss": 0.03236282540776068,
+      "maximum_conductance_update_difference": 0.0,
+      "reference_adapter_loss_difference": 0.0
+    },
+    {
+      "step": 8,
+      "reference_loss": 0.028771061450242996,
+      "adapter_loss": 0.028771061450242996,
+      "experimental_analytic_loss": 0.03234206805837022,
+      "maximum_conductance_update_difference": 0.0,
+      "reference_adapter_loss_difference": 0.0
+    },
+    {
+      "step": 9,
+      "reference_loss": 0.028464162722229958,
+      "adapter_loss": 0.028464162722229958,
+      "experimental_analytic_loss": 0.03232134619635283,
+      "maximum_conductance_update_difference": 0.0,
+      "reference_adapter_loss_difference": 0.0
+    },
+    {
+      "step": 10,
+      "reference_loss": 0.028188973665237427,
+      "adapter_loss": 0.028188973665237427,
+      "experimental_analytic_loss": 0.03230065987850567,
+      "maximum_conductance_update_difference": 0.0,
+      "reference_adapter_loss_difference": 0.0
+    }
+  ],
+  "original_vs_exact_sum_gradient": [
+    {
+      "layer": 0,
+      "original_sum_gradient_l2": 6.574041843414307,
+      "exact_sum_gradient_l2": 0.36299689962434023,
+      "original_to_exact_norm_ratio": 18.110462789675832,
+      "relative_l2_difference": 17.110462575338783
+    },
+    {
+      "layer": 1,
+      "original_sum_gradient_l2": 2.233278274536133,
+      "exact_sum_gradient_l2": 0.36994309439492373,
+      "original_to_exact_norm_ratio": 6.0368156842848135,
+      "relative_l2_difference": 5.036815547993892
+    },
+    {
+      "layer": 2,
+      "original_sum_gradient_l2": 0.5117546319961548,
+      "exact_sum_gradient_l2": 0.5117544882051042,
+      "original_to_exact_norm_ratio": 1.0000002809766284,
+      "relative_l2_difference": 1.426268745352806e-06
+    }
+  ],
+  "conclusion": "legacy adapter is exact for tested original functions/float32 updates; experimental analytic is a different optimizer, not paper-equivalent"
+}

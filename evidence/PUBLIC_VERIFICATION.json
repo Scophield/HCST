@@ -1,0 +1,23 @@
+{
+  "verification_date": "2026-10-06",
+  "version": "0.1.0",
+  "installation": "fresh project wheel in separate venv using existing laboratory NumPy/pytest; no PYTHONPATH or historical source",
+  "python": "3.9.13",
+  "numpy": "1.23.5",
+  "pytest": "7.1.2",
+  "tests": {
+    "passed": 19,
+    "skipped": 4,
+    "reason": "external historical source not supplied",
+    "elapsed_seconds": 0.79
+  },
+  "cpu_smoke": {
+    "exit_code": 0,
+    "seed": 20261006,
+    "samples": 32,
+    "paper_reproduced": false,
+    "hspice_verified": false,
+    "training_backend": "experimental-analytic"
+  },
+  "package_checks": "wheel and sdist member inventories inspected; no original scripts, historical weights, datasets or device models"
+}

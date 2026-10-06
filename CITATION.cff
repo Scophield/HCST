@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "Cite the HCST papers for the method and this repository for its computational implementation."
+title: "HCST: Hardware-conscious software training for fully analog ReRAM inference"
+version: "0.1.0"
+date-released: "2026-10-06"
+type: software
+license: MIT
+repository-code: "https://github.com/Scophield/HCST"
+authors:
+  - name: Scophield
+references:
+  - type: article
+    title: "A training method for deep neural network inference accelerators with high tolerance for their hardware imperfection"
+    authors:
+      - family-names: Gao
+        given-names: Shuchao
+      - family-names: Ohsawa
+        given-names: Takashi
+    doi: "10.35848/1347-4065/ad1895"
+    year: 2024
+    journal: "Japanese Journal of Applied Physics"
+  - type: conference-paper
+    title: "Hardware-conscious Software Training for Deep Neural Network Inference Accelerator Chips to Recover Accuracy Degradation due to Hardware Variabilities"
+    authors:
+      - family-names: Gao
+        given-names: Shuchao
+      - family-names: Ohsawa
+        given-names: Takashi
+    year: 2023
+    doi: "10.7567/SSDM.2023.J-5-03"
+    url: "https://arxiv.org/abs/2609.04259"

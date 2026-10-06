@@ -1,0 +1,12 @@
+{
+  "widths": [784, 256, 128, 10],
+  "loads": [1.0, 1.0, 1.0],
+  "gi": 1369.0,
+  "gs": 1369.0,
+  "gf": 1369.0,
+  "ref_i": 0.4859,
+  "ref_s": 0.4859,
+  "ref_f": 0.4859,
+  "test_limit": 10000,
+  "provenance": "mnist_fw_emulator_tensor-active-parameters-not-verified-publication-profile"
+}

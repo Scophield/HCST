@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fully-analog-reram"
+version = "0.1.0"
+description = "Hardware-conscious software training for fully analog ReRAM inference: a source-informed computational framework"
+license = {text = "MIT"}
+readme = "README.md"
+authors = [{name = "Scophield"}]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.23,<3"]
+
+[project.urls]
+Repository = "https://github.com/Scophield/HCST"
+Documentation = "https://github.com/Scophield/HCST#readme"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+legacy = ["torch>=1.12"]
+
+[project.scripts]
+reram = "reram.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

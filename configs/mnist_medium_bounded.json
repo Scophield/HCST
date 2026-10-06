@@ -1,0 +1,11 @@
+{
+  "seed": 20261006,
+  "widths": [784, 256, 128, 10],
+  "loads": [1.0, 0.3333333333333333, 0.16666666666666666],
+  "epochs": 40,
+  "batch_size": 32,
+  "train_limit": 2048,
+  "test_limit": 1024,
+  "learning_rate": 0.002,
+  "provenance": "bounded-medium-MNIST-new-2026-validation-not-JJAP-retraining"
+}

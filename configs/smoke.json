@@ -1,0 +1,10 @@
+{
+  "seed": 20261006,
+  "widths": [4, 5, 3],
+  "loads": [1.0, 0.3333333333333333],
+  "epochs": 5,
+  "train_limit": 64,
+  "test_limit": 32,
+  "batch_size": 16,
+  "provenance": "synthetic-smoke-new-2026-not-SSDM-IRIS-reproduction"
+}

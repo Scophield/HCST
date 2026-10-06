@@ -1,0 +1,8 @@
+# Environment observed during this RC validation; no packages were upgraded.
+numpy==1.23.5
+pytest==7.1.2
+# Optional external legacy parity/training adapter:
+torch==1.12.0
+# Packaging in the existing laboratory environment:
+setuptools==58.1.0
+wheel==0.37.1
