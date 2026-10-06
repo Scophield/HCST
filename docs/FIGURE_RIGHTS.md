@@ -9,3 +9,7 @@ The [JSAP/IOP applicability page](https://publishingsupport.iopscience.iop.org/q
 The figure is **excluded from the software MIT license**. Downstream users must obtain applicable rights for their own reuse. The README includes its figure number, explanatory caption, article credit, DOI link and copyright notice. No CC license is claimed.
 
 The README's other diagrams are newly authored explanations adapted from the concepts in JJAP Figs. 2-4, 10 and 13. Their captions identify the adaptations and paper-reported ranges; no per-chip points are invented. The SSDM/arXiv record has an [arXiv nonexclusive distribution license](https://arxiv.org/licenses/nonexclusive-distrib/1.0/), which is not the basis for this author figure reuse.
+
+## Original network-to-chip illustration
+
+The fully-analog-reram-network-to-chip SVG and PNG are original project artwork, supplied in their final Neuron Circuit / Softmax / Argmax version and released under the project MIT license. They are schematic mappings, not fabricated-chip or analog-Softmax verification. The original-paper Fig. 13 exception above remains independent.

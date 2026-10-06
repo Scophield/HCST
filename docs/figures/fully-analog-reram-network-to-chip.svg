@@ -1,0 +1,301 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1300" viewBox="0 0 1800 1300" role="img" aria-labelledby="title desc"><title id="title">Neural-network to physical analog ReRAM mapping</title><desc id="desc">A 2–3–2 illustrative network maps to differential ReRAM matrices of 2 by 3 and 3 by 2, with continuous analog hidden-layer signals and three abstract Neuron Circuit modules. The schematic output decision is labeled Softmax / Argmax, without claiming a software or analog-circuit implementation. Enlarged first-stage detail shows two 2 by 3 conductance banks, inverted current-to-voltage converters, B minus minus B plus subtraction, activation and follower. Paired-column placement is conceptual, not a fabricated layout.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs><g font-family="Arial, Helvetica, sans-serif"><rect width="1800" height="1300" fill="white"/>
+<text x="40" y="55" font-size="35" fill="#15334f" font-weight="700" text-anchor="start">Neural network → Fully Analog ReRAM Inference Accelerator</text>
+<text x="40" y="95" font-size="24" fill="#536c82" font-weight="400" text-anchor="start">Weights become conductances; neuron signals stay in the analog domain.</text>
+<rect x="35" y="130" width="760" height="430" rx="13" fill="#f3f7fc" stroke="#b4c6d8" stroke-width="2"/>
+<rect x="835" y="130" width="930" height="430" rx="13" fill="#f6fafc" stroke="#15334f" stroke-width="2"/>
+<text x="60" y="176" font-size="28" fill="#245db3" font-weight="700" text-anchor="start">Neural network</text>
+<text x="860" y="176" font-size="28" fill="#245db3" font-weight="700" text-anchor="start">Conceptual chip schematic</text>
+<polyline points="130,290 350,235" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<polyline points="130,290 350,360" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<polyline points="130,290 350,485" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<polyline points="130,430 350,235" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<polyline points="130,430 350,360" fill="none" stroke="#d77817" stroke-width="5" stroke-linejoin="round" />
+<polyline points="130,430 350,485" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<polyline points="350,235 610,290" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<polyline points="350,235 610,430" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<polyline points="350,360 610,290" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<polyline points="350,360 610,430" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<polyline points="350,485 610,290" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<polyline points="350,485 610,430" fill="none" stroke="#becbd9" stroke-width="2" stroke-linejoin="round" />
+<circle cx="130" cy="290" r="22" stroke="#245db3" stroke-width="3" fill="white"/>
+<circle cx="130" cy="430" r="22" stroke="#245db3" stroke-width="3" fill="white"/>
+<circle cx="350" cy="235" r="22" stroke="#008a9c" stroke-width="3" fill="#def3f4"/>
+<circle cx="350" cy="360" r="22" stroke="#008a9c" stroke-width="3" fill="#def3f4"/>
+<circle cx="350" cy="485" r="22" stroke="#008a9c" stroke-width="3" fill="#def3f4"/>
+<circle cx="610" cy="290" r="22" stroke="#245db3" stroke-width="3" fill="white"/>
+<circle cx="610" cy="430" r="22" stroke="#245db3" stroke-width="3" fill="white"/>
+<polyline points="65,290 102,290" fill="none" stroke="#245db3" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="65,430 102,430" fill="none" stroke="#245db3" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="636,290 697,290" fill="none" stroke="#245db3" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="636,430 697,430" fill="none" stroke="#245db3" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="130" y="210" font-size="21" fill="#245db3" font-weight="600" text-anchor="middle">Input (2)</text>
+<text x="350" y="210" font-size="21" fill="#008a9c" font-weight="600" text-anchor="middle">Hidden (3)</text>
+<text x="610" y="210" font-size="21" fill="#245db3" font-weight="600" text-anchor="middle">Output (2)</text>
+<text x="235" y="377" font-size="26" fill="#d77817" font-weight="700" text-anchor="start">wᵢⱼ</text>
+<text x="217" y="518" font-size="23" fill="#d77817" font-weight="600" text-anchor="middle">W1: 2 × 3</text>
+<text x="488" y="518" font-size="23" fill="#d77817" font-weight="600" text-anchor="middle">W2: 3 × 2</text>
+<text x="60" y="546" font-size="20" fill="#536c82" font-weight="400" text-anchor="start">Illustrative scale; not the MNIST topology.</text>
+<polyline points="795,345 829,345" fill="none" stroke="#245db3" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="930" y="218" font-size="23" fill="#d77817" font-weight="700" text-anchor="start">W1 → (G⁺, G⁻)</text>
+<polyline points="896,260 1154,260" fill="none" stroke="#245db3" stroke-width="2.5" stroke-linejoin="round" />
+<rect x="915" y="255" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="957" y="255" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<rect x="999" y="255" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="1041" y="255" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<rect x="1083" y="255" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="1125" y="255" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<polyline points="896,310 1154,310" fill="none" stroke="#245db3" stroke-width="2.5" stroke-linejoin="round" />
+<rect x="915" y="305" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="957" y="305" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<rect x="999" y="305" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="1041" y="305" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<rect x="1083" y="305" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="1125" y="305" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<polyline points="920,242 920,340" fill="none" stroke="#d77817" stroke-width="2" stroke-linejoin="round" />
+<polyline points="962,242 962,340" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round" />
+<polyline points="1004,242 1004,340" fill="none" stroke="#d77817" stroke-width="2" stroke-linejoin="round" />
+<polyline points="1046,242 1046,340" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round" />
+<polyline points="1088,242 1088,340" fill="none" stroke="#d77817" stroke-width="2" stroke-linejoin="round" />
+<polyline points="1130,242 1130,340" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round" />
+<text x="900" y="456" font-size="20" fill="#536c82" font-weight="400" text-anchor="start">2 × 3 logical weights</text>
+<text x="900" y="483" font-size="18" fill="#536c82" font-weight="400" text-anchor="start">Two output branches per neuron</text>
+<polyline points="862,260 896,260" fill="none" stroke="#245db3" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="862,310 896,310" fill="none" stroke="#245db3" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="920,340 920,410 1168,410 1168,257 1220,257" fill="none" stroke="#d77817" stroke-width="1.8" stroke-linejoin="round" />
+<polyline points="962,340 962,406 1172,406 1172,267 1220,267" fill="none" stroke="#008a9c" stroke-width="1.8" stroke-linejoin="round" />
+<rect x="1222" y="244" width="185" height="35" rx="13" fill="#e3f4f5" stroke="#008a9c" stroke-width="2"/>
+<text x="1314" y="266" font-size="19" fill="#008a9c" font-weight="700" text-anchor="middle">Neuron Circuit</text>
+
+
+
+<polyline points="1004,340 1004,420 1176,420 1176,304 1220,304" fill="none" stroke="#d77817" stroke-width="1.8" stroke-linejoin="round" />
+<polyline points="1046,340 1046,416 1180,416 1180,314 1220,314" fill="none" stroke="#008a9c" stroke-width="1.8" stroke-linejoin="round" />
+<rect x="1222" y="291" width="185" height="35" rx="13" fill="#e3f4f5" stroke="#008a9c" stroke-width="2"/>
+<text x="1314" y="313" font-size="19" fill="#008a9c" font-weight="700" text-anchor="middle">Neuron Circuit</text>
+
+
+
+<polyline points="1088,340 1088,430 1184,430 1184,351 1220,351" fill="none" stroke="#d77817" stroke-width="1.8" stroke-linejoin="round" />
+<polyline points="1130,340 1130,426 1188,426 1188,361 1220,361" fill="none" stroke="#008a9c" stroke-width="1.8" stroke-linejoin="round" />
+<rect x="1222" y="338" width="185" height="35" rx="13" fill="#e3f4f5" stroke="#008a9c" stroke-width="2"/>
+<text x="1314" y="360" font-size="19" fill="#008a9c" font-weight="700" text-anchor="middle">Neuron Circuit</text>
+
+
+
+<text x="1419" y="245" font-size="20" fill="#245db3" font-weight="600" text-anchor="start">Analog interconnect</text>
+<polyline points="1407,261 1440,261 1440,400 1471,400" fill="none" stroke="#245db3" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1407,308 1454,308 1454,434 1471,434" fill="none" stroke="#245db3" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1407,355 1468,355 1468,468 1471,468" fill="none" stroke="#245db3" stroke-width="2.3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1480" y="295" font-size="23" fill="#d77817" font-weight="700" text-anchor="start">W2</text>
+<text x="1480" y="324" font-size="21" fill="#d77817" font-weight="600" text-anchor="start">3 × 2</text>
+<polyline points="1471,400 1645,400" fill="none" stroke="#245db3" stroke-width="2.5" stroke-linejoin="round" />
+<rect x="1490" y="395" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="1532" y="395" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<rect x="1574" y="395" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="1616" y="395" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<polyline points="1471,434 1645,434" fill="none" stroke="#245db3" stroke-width="2.5" stroke-linejoin="round" />
+<rect x="1490" y="429" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="1532" y="429" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<rect x="1574" y="429" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="1616" y="429" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<polyline points="1471,468 1645,468" fill="none" stroke="#245db3" stroke-width="2.5" stroke-linejoin="round" />
+<rect x="1490" y="463" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="1532" y="463" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<rect x="1574" y="463" width="10" height="10" fill="white" stroke="#d77817" stroke-width="2"/>
+<rect x="1616" y="463" width="10" height="10" fill="white" stroke="#008a9c" stroke-width="2"/>
+<polyline points="1495,382 1495,498" fill="none" stroke="#d77817" stroke-width="2" stroke-linejoin="round" />
+<polyline points="1537,382 1537,498" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round" />
+<polyline points="1579,382 1579,498" fill="none" stroke="#d77817" stroke-width="2" stroke-linejoin="round" />
+<polyline points="1621,382 1621,498" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round" />
+<polyline points="1495,498 1495,504 1630,504 1630,408 1645,408" fill="none" stroke="#d77817" stroke-width="1.8" stroke-linejoin="round" />
+<polyline points="1537,498 1537,510 1633,510 1633,422 1645,422" fill="none" stroke="#008a9c" stroke-width="1.8" stroke-linejoin="round" />
+<polyline points="1579,498 1579,516 1636,516 1636,436 1645,436" fill="none" stroke="#d77817" stroke-width="1.8" stroke-linejoin="round" />
+<polyline points="1621,498 1621,522 1639,522 1639,450 1645,450" fill="none" stroke="#008a9c" stroke-width="1.8" stroke-linejoin="round" />
+<text x="1687" y="362" font-size="20" fill="#245db3" font-weight="600" text-anchor="middle">Output</text>
+<rect x="1645" y="388" width="98" height="92" rx="13" fill="white" stroke="#008a9c" stroke-width="2"/>
+<text x="1694" y="418" font-size="16" fill="#008a9c" font-weight="600" text-anchor="middle">Softmax /</text>
+<text x="1694" y="449" font-size="16" fill="#008a9c" font-weight="600" text-anchor="middle">Argmax</text>
+<polyline points="1743,418 1757,418" fill="none" stroke="#245db3" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1743,449 1757,449" fill="none" stroke="#245db3" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="860" y="504" font-size="21" fill="#008a9c" font-weight="600" text-anchor="start">Hidden neurons: I–V → subtract → activate → drive</text>
+<text x="860" y="538" font-size="19" fill="#245db3" font-weight="600" text-anchor="start">No ADC/DAC blocks between modeled layers; boundary I/O abstracted.</text>
+<rect x="35" y="590" width="1730" height="568" rx="14" fill="white" stroke="#b4c6d8" stroke-width="2"/>
+<text x="60" y="630" font-size="27" fill="#15334f" font-weight="700" text-anchor="start">Physical signal path · one selected hidden neuron j</text>
+<text x="60" y="666" font-size="24" fill="#d77817" font-weight="600" text-anchor="start">W1: two 2 × 3 conductance matrices</text>
+<text x="696" y="666" font-size="24" fill="#008a9c" font-weight="600" text-anchor="start">Neuron Circuit: current → voltage → activation → drive</text>
+<text x="198" y="713" font-size="24" fill="#d77817" font-weight="700" text-anchor="start">G⁺ bank</text>
+<text x="420" y="713" font-size="24" fill="#d77817" font-weight="700" text-anchor="start">G⁻ bank</text>
+<text x="62" y="763" font-size="22" fill="#245db3" font-weight="600" text-anchor="start">Vᵢ1</text>
+<path d="M85 778 H199 Q205 766 211 778 H259 Q265 766 271 778 H319 Q325 766 331 778 H429 Q435 766 441 778 H489 Q495 766 501 778 H549 Q555 766 561 778 H580" fill="none" stroke="#245db3" stroke-width="2.5"/>
+<text x="62" y="828" font-size="22" fill="#245db3" font-weight="600" text-anchor="start">Vᵢ2</text>
+<path d="M85 843 H199 Q205 831 211 843 H259 Q265 831 271 843 H319 Q325 831 331 843 H429 Q435 831 441 843 H489 Q495 831 501 843 H549 Q555 831 561 843 H580" fill="none" stroke="#245db3" stroke-width="2.5"/>
+
+
+<polyline points="205,742 205,970" fill="none" stroke="#b4c6d8" stroke-width="2" stroke-linejoin="round"  />
+<circle cx="181" cy="778" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<circle cx="205" cy="802" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<polyline points="181,778 187,784" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<rect x="186" y="788" width="22" height="8" fill="white" stroke="#15334f" stroke-width="2" transform="rotate(45 197 792)"/>
+<polyline points="201,798 205,802" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<circle cx="181" cy="843" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<circle cx="205" cy="867" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<polyline points="181,843 187,849" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<rect x="186" y="853" width="22" height="8" fill="white" stroke="#15334f" stroke-width="2" transform="rotate(45 197 857)"/>
+<polyline points="201,863 205,867" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+
+
+
+
+
+<polyline points="205,970 205,997" fill="none" stroke="#b4c6d8" stroke-width="2" stroke-linejoin="round"  stroke-dasharray="7 6"/>
+<polyline points="265,742 265,970" fill="none" stroke="#d77817" stroke-width="3" stroke-linejoin="round"  />
+<circle cx="241" cy="778" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<circle cx="265" cy="802" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<polyline points="241,778 247,784" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<rect x="246" y="788" width="22" height="8" fill="white" stroke="#15334f" stroke-width="2" transform="rotate(45 257 792)"/>
+<polyline points="261,798 265,802" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<circle cx="241" cy="843" r="3" fill="#d77817" stroke="#d77817" stroke-width="2.5"/>
+<circle cx="265" cy="867" r="3" fill="#d77817" stroke="#d77817" stroke-width="2.5"/>
+<polyline points="241,843 247,849" fill="none" stroke="#d77817" stroke-width="2" stroke-linejoin="round"  />
+<rect x="246" y="853" width="22" height="8" fill="white" stroke="#d77817" stroke-width="2" transform="rotate(45 257 857)"/>
+<polyline points="261,863 265,867" fill="none" stroke="#d77817" stroke-width="2" stroke-linejoin="round"  />
+
+
+
+
+
+<polyline points="325,742 325,970" fill="none" stroke="#b4c6d8" stroke-width="2" stroke-linejoin="round"  />
+<circle cx="301" cy="778" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<circle cx="325" cy="802" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<polyline points="301,778 307,784" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<rect x="306" y="788" width="22" height="8" fill="white" stroke="#15334f" stroke-width="2" transform="rotate(45 317 792)"/>
+<polyline points="321,798 325,802" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<circle cx="301" cy="843" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<circle cx="325" cy="867" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<polyline points="301,843 307,849" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<rect x="306" y="853" width="22" height="8" fill="white" stroke="#15334f" stroke-width="2" transform="rotate(45 317 857)"/>
+<polyline points="321,863 325,867" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+
+
+
+
+
+<polyline points="325,970 325,997" fill="none" stroke="#b4c6d8" stroke-width="2" stroke-linejoin="round"  stroke-dasharray="7 6"/>
+<polyline points="435,742 435,970" fill="none" stroke="#b4c6d8" stroke-width="2" stroke-linejoin="round"  />
+<circle cx="411" cy="778" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<circle cx="435" cy="802" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<polyline points="411,778 417,784" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<rect x="416" y="788" width="22" height="8" fill="white" stroke="#15334f" stroke-width="2" transform="rotate(45 427 792)"/>
+<polyline points="431,798 435,802" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<circle cx="411" cy="843" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<circle cx="435" cy="867" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<polyline points="411,843 417,849" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<rect x="416" y="853" width="22" height="8" fill="white" stroke="#15334f" stroke-width="2" transform="rotate(45 427 857)"/>
+<polyline points="431,863 435,867" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+
+
+
+
+
+<polyline points="435,970 435,997" fill="none" stroke="#b4c6d8" stroke-width="2" stroke-linejoin="round"  stroke-dasharray="7 6"/>
+<polyline points="495,742 495,970" fill="none" stroke="#d77817" stroke-width="3" stroke-linejoin="round"  />
+<circle cx="471" cy="778" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<circle cx="495" cy="802" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<polyline points="471,778 477,784" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<rect x="476" y="788" width="22" height="8" fill="white" stroke="#15334f" stroke-width="2" transform="rotate(45 487 792)"/>
+<polyline points="491,798 495,802" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<circle cx="471" cy="843" r="3" fill="#d77817" stroke="#d77817" stroke-width="2.5"/>
+<circle cx="495" cy="867" r="3" fill="#d77817" stroke="#d77817" stroke-width="2.5"/>
+<polyline points="471,843 477,849" fill="none" stroke="#d77817" stroke-width="2" stroke-linejoin="round"  />
+<rect x="476" y="853" width="22" height="8" fill="white" stroke="#d77817" stroke-width="2" transform="rotate(45 487 857)"/>
+<polyline points="491,863 495,867" fill="none" stroke="#d77817" stroke-width="2" stroke-linejoin="round"  />
+
+
+
+
+
+<polyline points="555,742 555,970" fill="none" stroke="#b4c6d8" stroke-width="2" stroke-linejoin="round"  />
+<circle cx="531" cy="778" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<circle cx="555" cy="802" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<polyline points="531,778 537,784" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<rect x="536" y="788" width="22" height="8" fill="white" stroke="#15334f" stroke-width="2" transform="rotate(45 547 792)"/>
+<polyline points="551,798 555,802" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<circle cx="531" cy="843" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<circle cx="555" cy="867" r="3" fill="#15334f" stroke="#15334f" stroke-width="2.5"/>
+<polyline points="531,843 537,849" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+<rect x="536" y="853" width="22" height="8" fill="white" stroke="#15334f" stroke-width="2" transform="rotate(45 547 857)"/>
+<polyline points="551,863 555,867" fill="none" stroke="#15334f" stroke-width="2" stroke-linejoin="round"  />
+
+
+
+
+
+<polyline points="555,970 555,997" fill="none" stroke="#b4c6d8" stroke-width="2" stroke-linejoin="round"  stroke-dasharray="7 6"/>
+<rect x="224" y="862" width="52" height="25" rx="4" fill="#fff5e6" stroke="#d77817" stroke-width="2"/>
+<text x="250" y="881" font-size="17" fill="#d77817" font-weight="700" text-anchor="middle">G⁺ᵢⱼ</text>
+<rect x="454" y="862" width="52" height="25" rx="4" fill="#fff5e6" stroke="#d77817" stroke-width="2"/>
+<text x="480" y="881" font-size="17" fill="#d77817" font-weight="700" text-anchor="middle">G⁻ᵢⱼ</text>
+<text x="62" y="1048" font-size="26" fill="#d77817" font-weight="700" text-anchor="start">wᵢⱼ ∝ G⁺ᵢⱼ − G⁻ᵢⱼ</text>
+<text x="62" y="1083" font-size="22" fill="#15334f" font-weight="400" text-anchor="start">I±ⱼ = Σᵢ G±ᵢⱼ (Vᵢ − V±col,j)</text>
+<text x="62" y="1120" font-size="19" fill="#536c82" font-weight="400" text-anchor="start">Resistive bridges connect rows to columns.</text>
+<text x="62" y="1144" font-size="18" fill="#536c82" font-weight="400" text-anchor="start">Wire arches denote crossings without electrical junctions.</text>
+<polyline points="265,970 265,999 625,999 625,780 705,780" fill="none" stroke="#d77817" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+<text x="606" y="763" font-size="24" fill="#d77817" font-weight="700" text-anchor="start">I⁺ⱼ</text>
+<polyline points="495,970 495,1016 649,1016 649,926 705,926" fill="none" stroke="#d77817" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+<text x="605" y="920" font-size="24" fill="#d77817" font-weight="700" text-anchor="start">I⁻ⱼ</text>
+<rect x="695" y="720" width="173" height="110" rx="8" fill="#f5fafb" stroke="#008a9c" stroke-width="2"/>
+<text x="781" y="747" font-size="20" fill="#008a9c" font-weight="700" text-anchor="middle">I–V Converter (+)</text>
+<path d="M747 760L747 814L801 787Z" fill="white" stroke="#008a9c" stroke-width="2.2"/>
+<text x="752" y="781" font-size="16" fill="#008a9c" font-weight="400" text-anchor="start">−</text>
+<text x="752" y="805" font-size="16" fill="#008a9c" font-weight="400" text-anchor="start">+</text>
+<polyline points="705,780 746,780" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round"  />
+<polyline points="802,787 853,787" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round"  />
+<polyline points="831,787 831,759 729,759 729,780" fill="none" stroke="#008a9c" stroke-width="1.6" stroke-linejoin="round"  />
+<rect x="771" y="755" width="26" height="8" rx="1" fill="white" stroke="#008a9c" stroke-width="2"/>
+<rect x="695" y="866" width="173" height="110" rx="8" fill="#f5fafb" stroke="#008a9c" stroke-width="2"/>
+<text x="781" y="893" font-size="20" fill="#008a9c" font-weight="700" text-anchor="middle">I–V Converter (−)</text>
+<path d="M747 906L747 960L801 933Z" fill="white" stroke="#008a9c" stroke-width="2.2"/>
+<text x="752" y="927" font-size="16" fill="#008a9c" font-weight="400" text-anchor="start">−</text>
+<text x="752" y="951" font-size="16" fill="#008a9c" font-weight="400" text-anchor="start">+</text>
+<polyline points="705,926 746,926" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round"  />
+<polyline points="802,933 853,933" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round"  />
+<polyline points="831,933 831,905 729,905 729,926" fill="none" stroke="#008a9c" stroke-width="1.6" stroke-linejoin="round"  />
+<rect x="771" y="901" width="26" height="8" rx="1" fill="white" stroke="#008a9c" stroke-width="2"/>
+<polyline points="868,787 922,787 922,826 1002,826" fill="none" stroke="#008a9c" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+<text x="885" y="774" font-size="22" fill="#008a9c" font-weight="700" text-anchor="start">B⁺</text>
+<polyline points="868,933 939,933 939,894 1002,894" fill="none" stroke="#008a9c" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+<text x="885" y="969" font-size="22" fill="#008a9c" font-weight="700" text-anchor="start">B⁻</text>
+<rect x="973" y="767" width="170" height="177" rx="9" fill="#f5fafb" stroke="#008a9c" stroke-width="2"/>
+<text x="1058" y="800" font-size="22" fill="#008a9c" font-weight="700" text-anchor="middle">Subtractor</text>
+<path d="M1002 817L1002 917L1115 867Z" fill="white" stroke="#008a9c" stroke-width="2.5"/>
+<text x="1011" y="842" font-size="25" fill="#008a9c" font-weight="400" text-anchor="start">−</text>
+<text x="1011" y="900" font-size="25" fill="#008a9c" font-weight="400" text-anchor="start">+</text>
+<text x="1058" y="1019" font-size="26" fill="#008a9c" font-weight="700" text-anchor="middle">B⁻ − B⁺</text>
+<text x="1058" y="1049" font-size="18" fill="#536c82" font-weight="400" text-anchor="middle">Inverted I–V branches</text>
+<polyline points="1115,867 1238,867" fill="none" stroke="#008a9c" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="1195" y="767" width="191" height="177" rx="9" fill="#f5fafb" stroke="#008a9c" stroke-width="2"/>
+<text x="1290" y="800" font-size="22" fill="#008a9c" font-weight="700" text-anchor="start">Activation</text>
+<text x="1290" y="827" font-size="22" fill="#008a9c" font-weight="700" text-anchor="start">Function</text>
+<polyline points="1238,908 1238,838" fill="none" stroke="#b4c6d8" stroke-width="1.8" stroke-linejoin="round"  />
+<polyline points="1221,897 1354,897" fill="none" stroke="#b4c6d8" stroke-width="1.8" stroke-linejoin="round"  />
+<polyline points="1225,884 1280,884 1332,839" fill="none" stroke="#008a9c" stroke-width="4" stroke-linejoin="round"  />
+<text x="1290" y="977" font-size="20" fill="#008a9c" font-weight="600" text-anchor="middle">ReLU baseline</text>
+<polyline points="1386,867 1450,867 1450,861 1484,861" fill="none" stroke="#008a9c" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="1435" y="767" width="203" height="177" rx="9" fill="#f5fafb" stroke="#008a9c" stroke-width="2"/>
+<text x="1536" y="800" font-size="22" fill="#008a9c" font-weight="700" text-anchor="start">Voltage</text>
+<text x="1536" y="827" font-size="22" fill="#008a9c" font-weight="700" text-anchor="start">Follower</text>
+<path d="M1484 847L1484 916L1549 881Z" fill="white" stroke="#008a9c" stroke-width="2.5"/>
+<text x="1490" y="869" font-size="19" fill="#008a9c" font-weight="400" text-anchor="start">+</text>
+<text x="1490" y="903" font-size="19" fill="#008a9c" font-weight="400" text-anchor="start">−</text>
+<polyline points="1549,881 1597,881 1597,930 1473,930 1473,898 1484,898" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round"  />
+<polyline points="1484,861 1450,861" fill="none" stroke="#008a9c" stroke-width="2" stroke-linejoin="round"  />
+<polyline points="1597,881 1660,881 1660,867 1727,867" fill="none" stroke="#245db3" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)" />
+<text x="1665" y="848" font-size="25" fill="#245db3" font-weight="700" text-anchor="start">Vⱼ</text>
+<text x="1543" y="1020" font-size="22" fill="#245db3" font-weight="600" text-anchor="start">Analog drive to</text>
+<text x="1543" y="1049" font-size="22" fill="#245db3" font-weight="600" text-anchor="start">the next synapse array</text>
+<text x="700" y="1100" font-size="22" fill="#536c82" font-weight="400" text-anchor="start">Finite gains and circuit offsets enter the software model.</text>
+<text x="700" y="1133" font-size="20" fill="#536c82" font-weight="400" text-anchor="start">Current conversion precedes subtraction; hidden layers retain AF + VF.</text>
+<g stroke="#008a9c" fill="none" stroke-width="2"><path d="M704 800H747"/><path d="M704 946H747"/></g><g fill="#536c82" font-size="15"><text x="702" y="818">Vref</text><text x="702" y="964">Vref</text></g>
+<text x="40" y="1201" font-size="23" fill="#536c82" font-weight="600" text-anchor="start">Conceptual mapping · not to scale · two banks shown; exact spatial organization is illustrative</text>
+<text x="40" y="1237" font-size="20" fill="#536c82" font-weight="400" text-anchor="start">Reference model: Scophield/HCST. Circuit symbols are functional; no fabricated-die, transistor-validation or measured-PPA claim.</text>
+<text x="40" y="1274" font-size="20" fill="#536c82">Output decision is schematic, without an implementation claim.</text></g></svg>

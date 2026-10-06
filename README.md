@@ -30,6 +30,10 @@ flowchart LR
 
 **ReRAM Crossbar Array** and **Synapse Array** name the same block. **IV-Converter + Subtractor, Activation Function, and Voltage Follower** together form the **Neuron Circuit**. **ReLU** is the implemented JJAP baseline instance of Activation Function. The final layer uses linear readout and bypasses activation/follower, matching the inspected source model.
 
+![Schematic neural-network-to-circuit mapping: differential Synapse Arrays and Neuron Circuits](docs/figures/fully-analog-reram-network-to-chip.png)
+
+**Schematic neural-network-to-circuit mapping.** This original illustration maps logical weights to differential conductance pairs, then expands the hidden Neuron Circuit into IV-Converter + Subtractor, Activation Function and Voltage Follower. The 2x3x2 network is illustrative, not the MNIST topology. Softmax / Argmax denotes a conceptual output decision: the implemented model retains linear voltage readout and classification by argmax; no analog Softmax implementation or circuit validation is claimed. [Editable SVG](docs/figures/fully-analog-reram-network-to-chip.svg). This original figure is covered by the project MIT license; the separate original-paper Fig. 13 retains its own rights statement.
+
 ## One command chain that runs without private files
 
 Python 3.9+ and NumPy are enough. No Torch, HSPICE, dataset, pretrained weights, PDK or server connection is required for the CPU demo.
