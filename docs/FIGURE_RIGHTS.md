@@ -13,3 +13,7 @@ The README's other diagrams are newly authored explanations adapted from the con
 ## Original network-to-chip illustration
 
 The fully-analog-reram-network-to-chip SVG and PNG are original project artwork, supplied in their final Neuron Circuit / Softmax / Argmax version and released under the project MIT license. They are schematic mappings, not fabricated-chip or analog-Softmax verification. The original-paper Fig. 13 exception above remains independent.
+
+## Original method-sequence illustration
+
+The hcst-circuit-emulator-training PNG and SVG are approved original project artwork released under MIT. They explain circuit design, mathematical emulator, gradient-based training, conductance updates and evaluation under the same Vos. The return arrow denotes only the software training loop. They do not alter the independent rights statement for JJAP Fig. 13.

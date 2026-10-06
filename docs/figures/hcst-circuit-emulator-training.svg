@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="490" viewBox="0 0 1800 490">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#245fb5"/></marker><marker id="feedback" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#e87808"/></marker></defs>
+<rect width="1800" height="490" fill="white"/>
+<g font-family="Arial, sans-serif">
+<text font-family="Helvetica" x="40" y="48" font-size="32" font-weight="bold" fill="#18344f">HCST starts with the circuit</text>
+<text font-family="Helvetica" x="40" y="83" font-size="22" fill="#59758c">Hardware design defines the mathematical emulator; training follows the same circuit model.</text>
+<rect x="40" y="132" width="310" height="160" rx="15" fill="#f3f8fc" stroke="#245fb5" stroke-width="2"/>
+<circle cx="67" cy="156" r="15" fill="#245fb5"/><text font-family="Helvetica" x="67" y="162" font-size="17" text-anchor="middle" fill="white">1</text>
+<text font-family="Helvetica" x="195" y="191" font-size="22" font-weight="bold" text-anchor="middle" fill="#245fb5">Circuit Design</text>
+<text font-family="Helvetica" x="195" y="222" font-size="17" font-weight="normal" text-anchor="middle" fill="#59758c">Synapse Array + Neuron Circuit</text>
+<path d="M353 212H379" stroke="#245fb5" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+<rect x="385" y="132" width="310" height="160" rx="15" fill="#f3f8fc" stroke="#0094a6" stroke-width="2"/>
+<circle cx="412" cy="156" r="15" fill="#0094a6"/><text font-family="Helvetica" x="412" y="162" font-size="17" text-anchor="middle" fill="white">2</text>
+<text font-family="Helvetica" x="540" y="191" font-size="22" font-weight="bold" text-anchor="middle" fill="#0094a6">Mathematical Hardware</text>
+<text font-family="Helvetica" x="540" y="222" font-size="22" font-weight="bold" text-anchor="middle" fill="#0094a6">Emulator</text>
+<text font-family="Helvetica" x="540" y="251" font-size="17" font-weight="normal" text-anchor="middle" fill="#59758c">Circuit-derived voltage equations</text>
+<path d="M698 212H724" stroke="#245fb5" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+<rect x="730" y="132" width="310" height="160" rx="15" fill="#f3f8fc" stroke="#0094a6" stroke-width="2"/>
+<circle cx="757" cy="156" r="15" fill="#0094a6"/><text font-family="Helvetica" x="757" y="162" font-size="17" text-anchor="middle" fill="white">3</text>
+<text font-family="Helvetica" x="885" y="191" font-size="22" font-weight="bold" text-anchor="middle" fill="#0094a6">Gradient-Based HCST</text>
+<text font-family="Helvetica" x="885" y="222" font-size="17" font-weight="normal" text-anchor="middle" fill="#59758c">Forward / backward / update</text>
+<path d="M1043 212H1069" stroke="#245fb5" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+<rect x="1075" y="132" width="310" height="160" rx="15" fill="#f3f8fc" stroke="#e87808" stroke-width="2"/>
+<circle cx="1102" cy="156" r="15" fill="#e87808"/><text font-family="Helvetica" x="1102" y="162" font-size="17" text-anchor="middle" fill="white">4</text>
+<text font-family="Helvetica" x="1230" y="191" font-size="22" font-weight="bold" text-anchor="middle" fill="#e87808">Updated Conductances</text>
+<text font-family="Helvetica" x="1230" y="222" font-size="17" font-weight="normal" text-anchor="middle" fill="#59758c">Differential pairs: G+ and G-</text>
+<path d="M1388 212H1414" stroke="#245fb5" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+<rect x="1420" y="132" width="310" height="160" rx="15" fill="#f3f8fc" stroke="#245fb5" stroke-width="2"/>
+<circle cx="1447" cy="156" r="15" fill="#245fb5"/><text font-family="Helvetica" x="1447" y="162" font-size="17" text-anchor="middle" fill="white">5</text>
+<text font-family="Helvetica" x="1575" y="191" font-size="22" font-weight="bold" text-anchor="middle" fill="#245fb5">Evaluation</text>
+<text font-family="Helvetica" x="1575" y="222" font-size="22" font-weight="bold" text-anchor="middle" fill="#245fb5">under the same Vos</text>
+<text font-family="Helvetica" x="1575" y="251" font-size="17" font-weight="normal" text-anchor="middle" fill="#59758c">Target hardware model</text>
+<path d="M1230 294V338H540V295" stroke="#e87808" stroke-width="2.5" fill="none" marker-end="url(#feedback)"/>
+<text font-family="Helvetica" x="885" y="366" text-anchor="middle" font-size="20" fill="#e87808">Software training loop: update conductances, repeat emulator forward pass</text>
+<text font-family="Helvetica" x="40" y="417" font-size="19" fill="#18344f">Fixed Vos and finite gains enter the mathematical model; IVC loads follow the circuit.</text>
+<text font-family="Helvetica" x="40" y="450" font-size="18" fill="#59758c">Conceptual method sequence. No real-time physical-chip feedback, device-pulse controller or fabricated-chip validation is implied.</text>
+<path d="M379 212l-9 -6v12Z" fill="#245fb5"/><path d="M724 212l-9 -6v12Z" fill="#245fb5"/><path d="M1069 212l-9 -6v12Z" fill="#245fb5"/><path d="M1414 212l-9 -6v12Z" fill="#245fb5"/><path d="M540 295l-6 9h12Z" fill="#e87808"/></g></svg>

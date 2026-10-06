@@ -16,6 +16,10 @@ The development starts with **the hardware circuit design**, not an ideal neural
 
 Training then follows this emulator: its circuit-aware forward and backward formulations define gradient-based descent and updates of the differential conductances (Section 4.3, Eqs. (6)-(14)). The updated conductances are mapped back to the target hardware model and evaluated under the **same fixed Vos**. This hardware-to-model-to-training order keeps optimization tied to the circuit that will perform inference, whereas conventional ideal-network offline training omits those circuit characteristics. Mathematical digital twin here means a circuit-derived software model, not a real-time synchronized physical chip; the paper's evaluation used SPICE without fabricated chips. The original-source update path and the public experimental analytic optimizer remain distinct, as described below.
 
+![HCST method sequence: circuit design, mathematical hardware emulator, gradient-based training, updated conductances, and evaluation under the same Vos](docs/figures/hcst-circuit-emulator-training.png)
+
+**Method development and training sequence.** Hardware design comes first; its mathematical emulator then guides gradient-based HCST and conductance updates. The feedback arrow represents repeated forward/backward/update steps inside software training, not a real-time physical-chip loop. Evaluation uses the same fixed Vos. [Editable SVG](docs/figures/hcst-circuit-emulator-training.svg). Original project artwork, covered by MIT.
+
 ```mermaid
 flowchart LR
     D[Data to input voltages] --> S[ReRAM Crossbar Array / Synapse Array]
