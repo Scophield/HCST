@@ -1,10 +1,14 @@
-# HCST: teaching software about a real analog circuit
+# Hardware-Conscious Software Training (HCST) for Fully Analog ReRAM Inference
 
 [![CPU verification](https://github.com/Scophield/HCST/actions/workflows/ci.yml/badge.svg)](https://github.com/Scophield/HCST/actions/workflows/ci.yml)
 
 **Hardware-Conscious Software Training (HCST) for a Fully Analog ReRAM Inference Accelerator.** This repository connects a voltage-domain neural network to the circuit that would execute it: a differential ReRAM Synapse Array followed by a Neuron Circuit.
 
 The reference method is **Hardware-Conscious Software Training (HCST)**, proposed by Shuchao Gao and Takashi Ohsawa. See the [JJAP paper](https://doi.org/10.35848/1347-4065/ad1895), [SSDM paper](https://doi.org/10.7567/SSDM.2023.J-5-03), and its [arXiv version](https://doi.org/10.48550/arXiv.2609.04259). This repository provides a source-informed computational implementation, circuit interfaces and independently runnable examples. It does not distribute the complete original experiment scripts or claim a new reproduction of the paper's accuracy.
+
+Use this framework to model differential ReRAM crossbars and finite-gain neuron circuits, explore fixed input-offset effects, and run circuit-aware numerical experiments on CPU.
+
+[Run the CPU demo](#one-command-chain-that-runs-without-private-files) | [Circuit model](#the-executable-circuit-model) | [Paper evidence](#paper-evidence-recover-accuracy-under-fixed-vos) | [Research preview scope](RELEASE_NOTES.md)
 
 ## Why the circuit belongs inside the training loop
 
